@@ -161,6 +161,13 @@ abstract class Producers_MixpanelBaseProducer extends Base_MixpanelBase {
         return $this->_token;
     }
 
+	/**
+	 * Override to set the token (long-running job, multiple projects, same codebase)
+	 * @param string $token
+	 */
+	public function setToken($token) {
+		$this->_token = $token;
+	}
 
     /**
      * Given a strategy type, return a new PersistenceStrategy object
